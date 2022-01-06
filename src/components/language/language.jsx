@@ -11,7 +11,13 @@ export const Language = ({ onSubmit }) => {
           onSubmit(selectLangEl.current.value);
         }}
       >
-        <select ref={selectLangEl} defaultValue={'en'} type="selection">
+        <label htmlFor="selectLang"> :زبان مقصد را انتخاب کنید</label>
+        <select
+          id="selectLang"
+          ref={selectLangEl}
+          defaultValue={'en'}
+          type="selection"
+        >
           {languagesData.map((lang, key) => {
             return (
               <option value={lang.code} key={key}>
@@ -20,6 +26,7 @@ export const Language = ({ onSubmit }) => {
             );
           })}
         </select>
+
         <input type="submit" />
       </form>
     </div>
