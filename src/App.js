@@ -6,12 +6,13 @@ import { Translate } from './components/translate/translate';
 
 function App() {
   const [text, setText] = useState('');
+  const [langCode, setLangCode] = useState('en');
   return (
     <div>
       <Field setText={setText} />
-      <Language />
+      <Language  onSubmit={setLangCode} />
       <hr />
-      <Translate text={text} />
+      <Translate text={text} langCode={langCode} />
     </div>
   );
 }
