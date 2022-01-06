@@ -11,7 +11,7 @@ function App() {
       <Field setText={setText} />
       <Language />
       <hr />
-      <Translate />
+      <Translate text={text} />
     </div>
   );
 }
